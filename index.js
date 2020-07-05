@@ -13,7 +13,8 @@ axios
 const dealWithData = (html) => {
     const $ = cheerio.load(html);
     const urlMeme = $("._2_tDEnGMLxpM6uOa2kaDB3.ImageBox-image.media-element._1XWObl-3b9tPy64oaG6fax");
-    const indexValue = randNo(10);
+    // console.log(urlMeme);
+    const indexValue = randNo(urlMeme.length);
     console.log(`Source is:\n${urlMeme[indexValue].attribs.src}`);
 };
 const randNo = (limit) => {
